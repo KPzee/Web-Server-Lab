@@ -1,22 +1,27 @@
-<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>My first page</title>
-    </head>
-    <body>
+    <head>
+        <title>My first page</title>
+        <script>
+            function alertBox(){
+                alert("That was the right choice!");
+            }
+        </script>
+    </head>
+    <body>
     <!--Top of the page-->
-        <h1>How do you enjoy Tea-wak</h1>
-        <p>Tea-wak Questionaire </p>
+        <h1>How do you enjoy Tea-wak</h1>
+        <p>Tea-wak Questionaire </p>
         <a href="./index.html">Home Page</a>
-        <form>
+        <form>
     <!--What's your favourite tea brand-->
-            Favourite green tea brand: <input required type="text" id="teaBrand" name="teaBrand"/>
-            <br/>
+            Favourite green tea brand: <input required type="text" id="teaBrand" name="teaBrand"/>
+            <br/>
     <!--What type of miswak do you like-->
            Do you like thick or thin Miswak and why: <input required type="text" id="miswakThickness" name="miswakThickness">
-           <br/>
+           <br/>
     <!--What temp do you like your Green-->
-            <p>Green Tea Temperature: </p>
+        <p>Green Tea Temperature: </p>
             <select name="teaTemp" id="teaTemp">
                 <option value="1">65</option>
                 <option value="2">70</option>
@@ -24,10 +29,10 @@
                 <option value="4">80</option>
             </select>
     <!--Do you like tea-wak-->
-            <input type="submit" value="Submit"/>
-            <p></p>Do you like miswak and tea?</p>
-            <button type="button">Yes, absolutely</button>
-            <button type="button">Yes, of course</button>
-        </form>
-    </body>
-</html> 
+        <input type="submit" value="Submit"/>
+            <p>Do you like miswak and tea?</p>
+            <button onclick="alertBox()" type="button">Yes, absolutely</button>
+            <button onclick="alertBox()" type="button">Yes, of course</button>
+        </form>
+    </body>
+</html>

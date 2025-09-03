@@ -2,6 +2,11 @@
 <html>
     <head>
         <title> Page 2 </title>
+        <script>
+            function pChanger() {
+                document.getElementById("tea-wak").innerHTML = "Why we should all love Miswak"
+            }
+        </script>
     </head>
     <body>
         <h1> This the start of the page</h1>
@@ -23,9 +28,12 @@
         </div>
         <div>
             <!--Here is why I love Miswak-->
-            <p>
+            <p id="tea-wak">
                 Why I love miswak
             </p>
+            <button onclick="pChanger()">
+                Reveal the truth
+            </button>
             <ul>
                 <li>Taste</li>
                 <li>Smell</li>
