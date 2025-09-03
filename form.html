@@ -9,6 +9,14 @@
             function showTruth(elem) {
                 elem.innerHTML="Green Tea should be 75"
             }
+            function forceField(){
+                if (document.getElementById("required").value == ''){
+                    document.getElementById("required").value = "Input text required!";
+                }
+                else {
+                    return;
+                }
+            }
         </script>
     </head>
     <body>
@@ -16,9 +24,9 @@
         <h1>How do you enjoy Tea-wak</h1>
         <p>Tea-wak Questionaire </p>
         <a href="./index.html">Home Page</a>
-        
+         <br/>
     <!--What's your favourite tea brand-->
-            Favourite green tea brand: <input required type="text" id="teaBrand" name="teaBrand"/>
+            Favourite green tea brand: <input id="required" onblur="forceField()" required type="text" id="teaBrand" name="teaBrand"/>
             <br/>
     <!--What type of miswak do you like-->
            Do you like thick or thin Miswak and why: <input required type="text" id="miswakThickness" name="miswakThickness">
