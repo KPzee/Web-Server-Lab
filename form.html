@@ -6,6 +6,9 @@
             function alertBox(){
                 alert("That was the right choice!");
             }
+            function showTruth(elem) {
+                elem.innerHTML="Green Tea should be 75"
+            }
         </script>
     </head>
     <body>
@@ -13,7 +16,7 @@
         <h1>How do you enjoy Tea-wak</h1>
         <p>Tea-wak Questionaire </p>
         <a href="./index.html">Home Page</a>
-        <form>
+        
     <!--What's your favourite tea brand-->
             Favourite green tea brand: <input required type="text" id="teaBrand" name="teaBrand"/>
             <br/>
@@ -21,7 +24,9 @@
            Do you like thick or thin Miswak and why: <input required type="text" id="miswakThickness" name="miswakThickness">
            <br/>
     <!--What temp do you like your Green-->
-        <p>Green Tea Temperature: </p>
+        <p> Green Tea Temperature: </p>
+        <button onclick="showTruth(this);"> Green Tea Temperature: </button>
+        <br/>
             <select name="teaTemp" id="teaTemp">
                 <option value="1">65</option>
                 <option value="2">70</option>
@@ -31,8 +36,8 @@
     <!--Do you like tea-wak-->
         <input type="submit" value="Submit"/>
             <p>Do you like miswak and tea?</p>
-            <button onclick="alertBox()" type="button">Yes, absolutely</button>
-            <button onclick="alertBox()" type="button">Yes, of course</button>
+            <button onclick="alertBox();" type="button">Yes, absolutely</button>
+            <button onclick="alertBox();" type="button">Yes, of course</button>
         </form>
     </body>
 </html>
