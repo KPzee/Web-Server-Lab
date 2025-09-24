@@ -25,11 +25,16 @@
         <p>Tea-wak Questionaire </p>
         <a href="./index.html">Home Page</a>
          <br/>
+        <form action="form.php" method="get">
     <!--What's your favourite tea brand-->
-            Favourite green tea brand: <input id="required" onblur="forceField()" required type="text" id="teaBrand" name="teaBrand"/>
+            <label for="teaBrand">
+            Favourite green tea brand: </label>
+            <input onblur="forceField()" required type="text" id="teaBrand" name="teaBrand"/>
             <br/>
     <!--What type of miswak do you like-->
-           Do you like thick or thin Miswak and why: <input required type="text" id="miswakThickness" name="miswakThickness">
+                <label for="miswakThickness">
+           Do you like thick or thin Miswak and why: </label>
+           <input required type="text" id="miswakThickness" name="miswakThickness">
            <br/>
     <!--What temp do you like your Green-->
         <p> Green Tea Temperature: </p>
