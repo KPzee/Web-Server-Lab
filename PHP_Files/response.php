@@ -18,7 +18,7 @@
             if (!$conn) {
               die("Connection failed: {mysqli_connect_error()}");
             }
-            $sql = "INSERT INTO users (`type`, thick, temp) VALUES ($tea_brand, $miswak_thickness, $tea_temp);";
+            $sql = "INSERT INTO teaFlavor (type, thick, temp) VALUES ('$tea_brand', '$miswak_thickness', $tea_temp);";
             $result = mysqli_query($conn, $sql);
         ?>
 
