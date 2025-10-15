@@ -20,9 +20,22 @@
             }
             $sql = "INSERT INTO teaFlavor (type, thick, temp) VALUES ('$tea_brand', '$miswak_thickness', $tea_temp);";
             $result = mysqli_query($conn, $sql);
-        ?>
+    ?>
 
     <body>
         <p>My Favorite tea brand is <?= htmlspecialchars($_GET['teaBrand']) . " and my miswak thickness is " . htmlspecialchars($_GET['miswakThickness']) . " and tea should always be made at " . htmlspecialchars($_GET['teaTemp']) ?></p>
+    
+        <select id="courses" name="courses">
+                <?php
+                    foreach($result as $row) 
+                    {
+                        echo "<option value='{$row['teaBrand']}'>{$row['miswakThickness']}{$row['teaTemp']}</option>\n";
+                    }
+                    // Don't forget to close the connection!
+                    mysqli_close($conn);
+                ?>
+        </select>
+
+
     </body>
 </html>
