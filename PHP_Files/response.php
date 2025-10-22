@@ -25,12 +25,26 @@
     <body>
         <p>My Favorite tea brand is <?= htmlspecialchars($_GET['teaBrand']) . " and my miswak thickness is " . htmlspecialchars($_GET['miswakThickness']) . " and tea should always be made at " . htmlspecialchars($_GET['teaTemp']) ?></p>
                 <?php
-                $sql = $sql = "select * from teaFlavor;";
+                $sql = $sql = "select temp from teaFlavor where temp=75;";
                 $result = mysqli_query($conn, $sql);
-                
+                <p>The correct temperatures</p>
                     foreach($result as $row) 
                     {
-                        echo "<p>{$row['type']} {$row['thick']} {$row['temp']}</p>\n";
+                        echo "<li>{$row['type']}</li>\n";
+                    }
+                $sql = $sql = "select distinct thick from teaFlavor;";
+                $result = mysqli_query($conn, $sql);
+                <p>The unique thicknesses</p>
+                    foreach($result as $row) 
+                    {
+                        echo "<li>{$row['thick']}</li>\n";
+                    }
+                $sql = $sql = "select max(id) from teaFlavor;";
+                $result = mysqli_query($conn, $sql);
+                <p>How many inputs</p>
+                    foreach($result as $row) 
+                    {
+                        echo "<p>{$row['id']}</p>\n";
                     }
                     // Don't forget to close the connection!
                     mysqli_close($conn);
