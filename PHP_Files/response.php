@@ -24,21 +24,17 @@
 
     <body>
         <p>My Favorite tea brand is <?= htmlspecialchars($_GET['teaBrand']) . " and my miswak thickness is " . htmlspecialchars($_GET['miswakThickness']) . " and tea should always be made at " . htmlspecialchars($_GET['teaTemp']) ?></p>
-    
-        <select id="courses" name="teaFlavor">
                 <?php
                 $sql = $sql = "select * from teaFlavor;";
                 $result = mysqli_query($conn, $sql);
                 
                     foreach($result as $row) 
                     {
-                        echo "<option value='{$row['type']}'>{$row['thick']}{$row['temp']}</option>\n";
+                        echo "<p>'{$row['type']}'>{$row['thick']}{$row['temp']}</p>\n";
                     }
                     // Don't forget to close the connection!
                     mysqli_close($conn);
                 ?>
-        </select>
-
 
     </body>
 </html>
