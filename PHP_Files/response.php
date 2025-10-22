@@ -30,7 +30,7 @@
                 echo "<p>The correct temperatures</p>";
                     foreach($result as $row) 
                     {
-                        echo "<p>{$row['type']}</p>\n";
+                        echo "<p>{$row['temp']}</p>\n";
                     }
                 $sql = $sql = "select distinct thick from teaFlavor;";
                 $result = mysqli_query($conn, $sql);
