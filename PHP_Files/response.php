@@ -37,7 +37,7 @@
                 echo "<h3>The unique thicknesses</>";
                     foreach($result as $row) 
                     {
-                        echo "<li>{$row['thick']}</li>\n";
+                        echo "<p>{$row['thick']}</p>\n";
                     }
                 $sql = $sql = "select count(*) from teaFlavor;";
                 $result = mysqli_query($conn, $sql);
