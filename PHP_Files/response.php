@@ -30,7 +30,7 @@
                 echo "<p>The correct temperatures</p>";
                     foreach($result as $row) 
                     {
-                        echo "<li>{$row['type']}</li>\n";
+                        echo "<p>{$row['type']}</p>\n";
                     }
                 $sql = $sql = "select distinct thick from teaFlavor;";
                 $result = mysqli_query($conn, $sql);
@@ -44,7 +44,7 @@
                 echo "<p>How many inputs</p>";
                     foreach($result as $row) 
                     {
-                        echo "<p>{$row['id']}</p>\n";
+                        echo "<p>{$row['max(id)']}</p>\n";
                     }
                     // Don't forget to close the connection!
                     mysqli_close($conn);
