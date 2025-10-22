@@ -30,7 +30,7 @@
                 
                     foreach($result as $row) 
                     {
-                        echo "<p>'{$row['type']}'>{$row['thick']}{$row['temp']}</p>\n";
+                        echo "<p>{$row['type']} {$row['thick']} {$row['temp']}</p>\n";
                     }
                     // Don't forget to close the connection!
                     mysqli_close($conn);
