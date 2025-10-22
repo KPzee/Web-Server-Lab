@@ -27,21 +27,21 @@
                 <?php
                 $sql = $sql = "select temp from teaFlavor where temp=75;";
                 $result = mysqli_query($conn, $sql);
-                echo "<h1>The correct temperatures</h1>";
+                echo "<h3>The correct temperatures</h3>";
                     foreach($result as $row) 
                     {
                         echo "<p>{$row['temp']}</p>\n";
                     }
                 $sql = $sql = "select distinct thick from teaFlavor;";
                 $result = mysqli_query($conn, $sql);
-                echo "<h1>The unique thicknesses</>";
+                echo "<h3>The unique thicknesses</>";
                     foreach($result as $row) 
                     {
                         echo "<li>{$row['thick']}</li>\n";
                     }
                 $sql = $sql = "select count(*) from teaFlavor;";
                 $result = mysqli_query($conn, $sql);
-                echo "<h1>How many inputs</h1>";
+                echo "<h3>How many inputs</h3>";
                     foreach($result as $row) 
                     {
                         echo "<p>{$row['count(*)']}</p>\n";
