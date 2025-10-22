@@ -34,7 +34,7 @@
                     }
                 $sql = $sql = "select distinct thick from teaFlavor;";
                 $result = mysqli_query($conn, $sql);
-                echo "<h3>The unique thicknesses</>";
+                echo "<h3>The unique thicknesses</h3>";
                     foreach($result as $row) 
                     {
                         echo "<p>{$row['thick']}</p>\n";
