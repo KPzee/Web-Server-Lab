@@ -27,24 +27,24 @@
                 <?php
                 $sql = $sql = "select temp from teaFlavor where temp=75;";
                 $result = mysqli_query($conn, $sql);
-                echo "<p>The correct temperatures</p>";
+                echo "<h1>The correct temperatures</h1>";
                     foreach($result as $row) 
                     {
                         echo "<p>{$row['temp']}</p>\n";
                     }
                 $sql = $sql = "select distinct thick from teaFlavor;";
                 $result = mysqli_query($conn, $sql);
-                echo "<p>The unique thicknesses</p>";
+                echo "<h1>The unique thicknesses</>";
                     foreach($result as $row) 
                     {
                         echo "<li>{$row['thick']}</li>\n";
                     }
-                $sql = $sql = "select max(id) from teaFlavor;";
+                $sql = $sql = "select count(*) from teaFlavor;";
                 $result = mysqli_query($conn, $sql);
-                echo "<p>How many inputs</p>";
+                echo "<h1>How many inputs</h1>";
                     foreach($result as $row) 
                     {
-                        echo "<p>{$row['max(id)']}</p>\n";
+                        echo "<p>{$row['count(*)']}</p>\n";
                     }
                     // Don't forget to close the connection!
                     mysqli_close($conn);
