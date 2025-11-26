@@ -14,6 +14,7 @@
        if ($action === 'Toggle LED') {
            `gpio toggle 0`;
        }
+    }
     ?>
 
 </body>
