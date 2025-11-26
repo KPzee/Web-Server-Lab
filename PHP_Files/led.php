@@ -12,10 +12,11 @@
     <h1>Welcome to LED Control Page</h1>
     <p>This is a basic PHP page setup.</p>
     <form method="POST">
-    <input type="button" name="toggle" value="Toggle LED">
+    <button name="action" value="Toggle LED" type="submit">Toggle LED</button>
     </form>
 
     <?php
+    if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         if (isset($_POST["toggle"])) {
             `gpio toggle 0`;
         }
