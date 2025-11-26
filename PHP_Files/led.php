@@ -11,5 +11,15 @@
 <body>
     <h1>Welcome to LED Control Page</h1>
     <p>This is a basic PHP page setup.</p>
+    <form method="POST">
+    <input type="button" name="toggle" value="Toggle LED">
+    </form>
+
+    <?php
+        if (isset($_POST["toggle"])) {
+            `gpio toggle 0`;
+        }
+    ?>
+
 </body>
 </html>
