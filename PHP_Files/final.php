@@ -7,8 +7,8 @@
             // Retrieve submitted information
             $gQuery = htmlspecialchars($_GET["gQuery"]);
             $server = "localhost";
-            $username = "php";
-            $password = "password";
+            $username = "root";
+            $password = "root";
             $database = "Final";
             $conn = mysqli_connect($server, $username, $password, $database);
             
