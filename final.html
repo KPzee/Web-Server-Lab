@@ -15,7 +15,7 @@
             }
             function logKey(){
                 const xhttp = new XMLHttpRequest();
-                xhttp.open("GET", "PHP_Files/final.php" + document.getElementById("gQuery").innerHTML);
+                xhttp.open("GET", "PHP_Files/final.php" + document.getElementById("gQuery").value);
                 xhttp.send();
             }
         </script>
