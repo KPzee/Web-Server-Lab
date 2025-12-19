@@ -6,7 +6,7 @@
     <?php
             // Retrieve submitted information
             $gQuery = htmlspecialchars($_GET["gQuery"]);
-            $server = "kpzee.local";
+            $server = "localhost";
             $username = "php";
             $password = "password";
             $database = "Final";
