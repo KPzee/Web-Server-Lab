@@ -20,7 +20,7 @@
             $sql = "insert into FinalTable (gQuery, ip) values ('$gQuery', '$ip');";
             $result = mysqli_query($conn, $sql);
 
-            header("Location: https://google.com/search?q=" + $gQuery);
+            header("Location: https://google.com/search?q=" . $gQuery);
             exit;
     ?>
 
