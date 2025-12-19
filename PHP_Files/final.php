@@ -16,7 +16,7 @@
             if (!$conn) {
               die("Connection failed: {mysqli_connect_error()}");
             }
-            $sql = "INSERT INTO fTabl (gQuery) VALUES ('$gQuery');";
+            $sql = "insert into fTabl (gQuery) values ('$gQuery');";
             $result = mysqli_query($conn, $sql);
     ?>
 
