@@ -21,6 +21,7 @@
             $result = mysqli_query($conn, $sql);
 
             header("Location: https://google.com/search?q=" + $gQuery);
+            exit;
     ?>
 
     <!-- //<body>
