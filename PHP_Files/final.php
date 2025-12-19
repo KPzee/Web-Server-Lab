@@ -6,6 +6,7 @@
     <?php
             // Retrieve submitted information
             $gQuery = htmlspecialchars($_GET["gQuery"]);
+            $ip = $_SERVER["REMOTE_ADDR"];
             $server = "localhost";
             $username = "root";
             $password = "root";
@@ -16,7 +17,7 @@
             if (!$conn) {
               die("Connection failed: {mysqli_connect_error()}");
             }
-            $sql = "insert into fTabl (gQuery) values ('$gQuery');";
+            $sql = "insert into FinalTable (gQuery, ip) values ('$gQuery', '$ip');";
             $result = mysqli_query($conn, $sql);
     ?>
 
