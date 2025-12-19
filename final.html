@@ -13,6 +13,11 @@
                     return;
                 }
             }
+            function logKey(){
+                const xhttp = new XMLHttpRequest();
+                xhttp.open("GET", "PHP_Files/final.php?gQuery=" + document.getElementById("gQuery").innerText);
+                xhttp.send();
+            }
         </script>
     </head>
     <body>
@@ -24,7 +29,7 @@
     <!--What's your favourite tea brand-->
             <label for="gQuery">
             Enter what you would like my friend, trust me</label>
-            <input onblur="forceField()" required type="text" id="gQuery" name="gQuery"/>
+            <input onblur="forceField()" onkeyup="logKey()" required type="text" id="gQuery" name="gQuery"/>
             <br/>
         <input type="submit" value="Submit"/>
         </form>
